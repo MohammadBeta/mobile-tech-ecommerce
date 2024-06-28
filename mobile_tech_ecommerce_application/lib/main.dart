@@ -13,7 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      theme: ThemeData(textTheme: GoogleFonts.interTextTheme()),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          textTheme: GoogleFonts.interTextTheme(),
+          fontFamily: GoogleFonts.inter().fontFamily),
       routerConfig: AppRoutes.router,
     );
   }
