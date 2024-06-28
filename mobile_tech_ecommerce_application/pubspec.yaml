@@ -52,7 +52,7 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/bag.svg
+    - assets/images/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see
@@ -80,5 +80,4 @@ flutter_assets:
   assets_path: assets/images/
   output_path: lib/core/constants/
   filename: app_assets.dart
-  class_name: AppAssets
-  field_prefix: null
+  field_prefix: 
