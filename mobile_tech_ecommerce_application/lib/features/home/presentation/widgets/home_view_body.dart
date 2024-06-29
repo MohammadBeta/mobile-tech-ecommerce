@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_tech_ecommerce_application/core/constants/app_assets.dart';
-import 'package:mobile_tech_ecommerce_application/core/constants/app_styles.dart';
-import 'package:mobile_tech_ecommerce_application/features/home/data/model/category_model.dart';
 import 'package:mobile_tech_ecommerce_application/core/widgets/category_list_view.dart';
 
 import '../../../../core/widgets/app_bar/custom_app_bar_section.dart';
