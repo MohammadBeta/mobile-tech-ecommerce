@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:mobile_tech_ecommerce_application/core/constants/app_routes.dart';
 
-import '../constants/app_assets.dart';
 import '../../features/home/data/model/category_model.dart';
+import '../constants/app_assets.dart';
 import 'category_list_view_item.dart';
 
 class CategoriseListView extends StatelessWidget {
@@ -24,8 +26,13 @@ class CategoriseListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 4),
-            child: CategoryListViewItem(
-              category: categoryList[index],
+            child: GestureDetector(
+              onTap: () {
+                GoRouter.of(context).push(AppRoutes.productsView);
+              },
+              child: CategoryListViewItem(
+                category: categoryList[index],
+              ),
             ),
           );
         },

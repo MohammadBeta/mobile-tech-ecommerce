@@ -15,9 +15,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          textTheme: GoogleFonts.interTextTheme(),
-          fontFamily: GoogleFonts.inter().fontFamily),
+          fontFamily: 'Inter', textTheme: GoogleFonts.interTextTheme()),
       routerConfig: AppRoutes.router,
     );
   }
 }
+
+
+// flutter clean
+// flutter pub get
+// flutter run

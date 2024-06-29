@@ -10,14 +10,17 @@ class AppBarSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        CustomAppBar(),
-        SizedBox(
-          height: 12,
-        ),
-        SearchBox(),
-      ],
+    return Padding(
+          padding: EdgeInsets.symmetric(horizontal: 24),
+      child: const Column(
+        children: [
+          CustomAppBar(),
+          SizedBox(
+            height: 12,
+          ),
+          SearchBox(),
+        ],
+      ),
     );
   }
 }
