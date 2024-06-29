@@ -5,9 +5,9 @@ import '../../../../core/constants/app_styles.dart';
 
 class ProductRate extends StatelessWidget {
   const ProductRate({
-    super.key,
+    super.key, required this.rate,
   });
-
+final double rate;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -18,7 +18,7 @@ class ProductRate extends StatelessWidget {
           size: 16,
         ),
         Text(
-          "4.9",
+          rate.toString(),
           style: AppTextStyles.styleInterMedium14
               .copyWith(color: AppColors.primary500),
         )

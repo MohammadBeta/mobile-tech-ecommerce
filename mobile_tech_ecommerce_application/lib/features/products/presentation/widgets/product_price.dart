@@ -6,7 +6,11 @@ import '../../../../core/constants/app_styles.dart';
 class ProductPrice extends StatelessWidget {
   const ProductPrice({
     super.key,
+    required this.offerPrice,
+    required this.price,
   });
+  final double offerPrice;
+  final double price;
 
   @override
   Widget build(BuildContext context) {
@@ -15,13 +19,13 @@ class ProductPrice extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          r"$ 2,869.00",
+          r"$ " + offerPrice.toString(),
           style: AppTextStyles.styleInterRegular10.copyWith(
               color: AppColors.gray717171,
               decoration: TextDecoration.lineThrough),
         ),
         Text(
-          r"$ 2,689.00",
+          r"$ " + price.toString(),
           style: AppTextStyles.styleInterLight12,
         ),
       ],

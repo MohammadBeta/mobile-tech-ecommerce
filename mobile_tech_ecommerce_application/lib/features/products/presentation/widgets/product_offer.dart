@@ -6,8 +6,9 @@ import '../../../../core/constants/app_styles.dart';
 class ProductOffer extends StatelessWidget {
   const ProductOffer({
     super.key,
+    required this.offerDiscount,
   });
-
+  final double offerDiscount;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,7 +26,7 @@ class ProductOffer extends StatelessWidget {
       ),
       child: Center(
         child: Text(
-          '-15%',
+          '-${offerDiscount.toStringAsFixed(0)}%',
           textAlign: TextAlign.center,
           style: AppTextStyles.styleInterLight12
               .copyWith(color: AppColors.secondary),
