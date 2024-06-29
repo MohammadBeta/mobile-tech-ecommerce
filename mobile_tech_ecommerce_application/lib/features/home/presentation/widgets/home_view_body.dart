@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_tech_ecommerce_application/core/constants/app_assets.dart';
+import 'package:mobile_tech_ecommerce_application/core/constants/app_styles.dart';
+import 'package:mobile_tech_ecommerce_application/features/home/data/model/category_model.dart';
+import 'package:mobile_tech_ecommerce_application/core/widgets/category_list_view.dart';
 
-import 'app_bar_section.dart';
+import '../../../../core/widgets/app_bar/custom_app_bar_section.dart';
 import 'exploer_section.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -20,7 +24,11 @@ class HomeViewBody extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 24),
           child: ExploreSection(),
-        )
+        ),
+        SizedBox(
+          height: 16,
+        ),
+        CategoriseListView()
       ],
     );
   }

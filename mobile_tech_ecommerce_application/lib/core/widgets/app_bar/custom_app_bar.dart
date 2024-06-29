@@ -1,14 +1,13 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../../../core/constants/app_assets.dart';
-import '../../../../core/constants/app_colors.dart';
-import '../../../../core/constants/app_styles.dart';
+import '../../constants/app_assets.dart';
+import '../../constants/app_colors.dart';
+import '../../constants/app_styles.dart';
 
-class HomeAppBar extends StatelessWidget {
-  const HomeAppBar({super.key});
+class CustomAppBar extends StatelessWidget {
+  const CustomAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {

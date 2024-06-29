@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/app_colors.dart';
-import '../../../../core/constants/app_styles.dart';
+import '../../constants/app_colors.dart';
+import '../../constants/app_styles.dart';
 
 class SearchBox extends StatelessWidget {
   const SearchBox({super.key});
