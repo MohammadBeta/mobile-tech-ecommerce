@@ -28,7 +28,7 @@ class ExploreSection extends StatelessWidget {
                   CustomButton(
                     onPressed: () {
                       ApiCrud(dio: Dio())
-                          .getData(url: 'http://127.0.0.1:8002/api/categories');
+                          .getData(url: 'http://192.168.1.11:8000/api/categories');
                     },
                   ),
                 ],

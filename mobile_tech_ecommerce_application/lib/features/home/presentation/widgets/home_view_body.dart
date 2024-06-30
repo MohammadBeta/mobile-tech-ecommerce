@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_tech_ecommerce_application/core/widgets/category_list_view.dart';
+import 'package:mobile_tech_ecommerce_application/core/widgets/category/category_list_view.dart';
 
 import '../../../../core/widgets/app_bar/custom_app_bar_section.dart';
 import 'exploer_section.dart';

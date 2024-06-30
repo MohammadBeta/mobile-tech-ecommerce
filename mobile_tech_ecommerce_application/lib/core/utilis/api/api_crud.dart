@@ -6,8 +6,8 @@ class ApiCrud {
 
   Future<Map<String, dynamic>> getData({required String url}) async {
     final response = await dio.get(url);
-    print(response);
+    // print(response);
 
-    return {};
+    return response.data;
   }
 }
