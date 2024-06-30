@@ -5,21 +5,25 @@ import 'package:mobile_tech_ecommerce_application/core/widgets/category_list_vie
 import 'products_grid_view.dart';
 
 class ProductsViewBody extends StatelessWidget {
-  const ProductsViewBody({super.key});
+  const ProductsViewBody({super.key, required this.selectedIndex});
+
+  final int selectedIndex;
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        AppBarSection(),
-        SizedBox(
+        const AppBarSection(),
+        const SizedBox(
           height: 16,
         ),
-        CategoriseListView(),
-        SizedBox(
+        CategoriseListView(
+          selectedIndex: selectedIndex,
+        ),
+        const SizedBox(
           height: 16,
         ),
-        Expanded(
+        const Expanded(
             child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24),
           child: ProductsGridView(),

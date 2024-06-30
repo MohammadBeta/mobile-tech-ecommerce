@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
-import '../constants/app_styles.dart';
+import 'package:mobile_tech_ecommerce_application/core/constants/app_colors.dart';
+
 import '../../features/home/data/model/category_model.dart';
+import '../constants/app_styles.dart';
 
 class CategoryListViewItem extends StatelessWidget {
-  const CategoryListViewItem({super.key, required this.category});
+  const CategoryListViewItem(
+      {super.key, required this.category, this.active = false});
   final CategoryModel category;
+  final bool active;
+
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -15,10 +20,21 @@ class CategoryListViewItem extends StatelessWidget {
           Container(
             height: 65,
             decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                boxShadow: active
+                    ? const [
+                        BoxShadow(
+                            color: AppColors.secondary,
+                            offset: Offset(0, 5),
+                            blurRadius: 100,
+                            spreadRadius: 0.0001,
+                            blurStyle: BlurStyle.inner)
+                      ]
+                    : null,
                 image: DecorationImage(
-              image: AssetImage(category.image),
-              fit: BoxFit.contain,
-            )),
+                  image: AssetImage(category.image),
+                  fit: BoxFit.contain,
+                )),
           ),
           const SizedBox(
             height: 4,

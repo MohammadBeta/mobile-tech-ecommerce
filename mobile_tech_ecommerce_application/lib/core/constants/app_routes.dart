@@ -15,7 +15,11 @@ abstract class AppRoutes {
       ),
       GoRoute(
         path: productsView,
-        builder: (context, state) => const ProductsView(),
+        builder: (context, state) {
+          //need to refactor when use cubit
+          //dont push to view when select category to reduce loading
+          return ProductsView(selectedIndex: state.extra as int);
+        },
       ),
     ],
   );

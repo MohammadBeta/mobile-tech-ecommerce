@@ -11,6 +11,7 @@ class ProductColors extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         ...List.generate(
             colors.length,

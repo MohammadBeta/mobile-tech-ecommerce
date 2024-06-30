@@ -1,4 +1,6 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile_tech_ecommerce_application/core/utilis/api/api_crud.dart';
 
 import '../../../../core/constants/app_assets.dart';
 import '../../../../core/widgets/custom_button.dart';
@@ -16,14 +18,19 @@ class ExploreSection extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 24),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 24),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  ExploreTextColumn(),
-                  CustomButton(),
+                  const ExploreTextColumn(),
+                  CustomButton(
+                    onPressed: () {
+                      ApiCrud(dio: Dio())
+                          .getData(url: 'http://127.0.0.1:8002/api/categories');
+                    },
+                  ),
                 ],
               ),
             ),

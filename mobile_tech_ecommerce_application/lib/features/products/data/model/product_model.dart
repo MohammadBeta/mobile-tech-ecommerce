@@ -9,8 +9,8 @@ class ProductModel {
   final double rate;
   final List<ProductColor> colors;
   final double offerDiscount;
-
-  const ProductModel(this.rate,
+  final String categoryGuid;
+  const ProductModel( this.categoryGuid,this.rate,
       {required this.name,
       required this.price,
       required this.offerPrice,
