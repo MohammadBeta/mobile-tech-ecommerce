@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:mobile_tech_ecommerce_application/core/utilis/api/api_crud.dart';
-import 'package:mobile_tech_ecommerce_application/core/utilis/api/api_urls.dart';
+import 'package:mobile_tech_ecommerce_application/core/api/api_crud.dart';
+import 'package:mobile_tech_ecommerce_application/core/api/api_urls.dart';
 import 'package:mobile_tech_ecommerce_application/core/models/category_model.dart';
 import 'package:mobile_tech_ecommerce_application/features/home/data/reop/home_repo.dart';
 

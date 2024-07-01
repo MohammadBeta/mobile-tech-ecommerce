@@ -19,10 +19,11 @@ class ProductItem extends StatelessWidget {
       padding: const EdgeInsets.all(8),
       child: Stack(
         children: [
-          Positioned(
-              top: 0,
-              left: 0,
-              child: ProductOffer(offerDiscount: productModel.offerDiscount)),
+          if (productModel.hasOffer)
+            Positioned(
+                top: 0,
+                left: 0,
+                child: ProductOffer(offerDiscount: productModel.offerDiscount)),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,

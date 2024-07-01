@@ -18,12 +18,13 @@ class ProductPrice extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          r"$ " + offerPrice.toString(),
-          style: AppTextStyles.styleInterRegular10.copyWith(
-              color: AppColors.gray717171,
-              decoration: TextDecoration.lineThrough),
-        ),
+        if (offerPrice != 0)
+          Text(
+            r"$ " + offerPrice.toString(),
+            style: AppTextStyles.styleInterRegular10.copyWith(
+                color: AppColors.gray717171,
+                decoration: TextDecoration.lineThrough),
+          ),
         Text(
           r"$ " + price.toString(),
           style: AppTextStyles.styleInterLight12,

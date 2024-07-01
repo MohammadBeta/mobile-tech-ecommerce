@@ -12,10 +12,10 @@ import '../custom_inprogress_widget.dart';
 import 'category_list_view_item.dart';
 
 class CategoriseListView extends StatelessWidget {
-  const CategoriseListView({super.key, this.selectedIndex = -1});
+  const CategoriseListView({super.key, this.currentCategory, this.onTap});
 
-  final int selectedIndex;
-
+  final CategoryModel? currentCategory;
+  final void Function(String)? onTap;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -39,12 +39,16 @@ class CategoriseListView extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 4),
                   child: InkWell(
                     onTap: () {
-                      GoRouter.of(context)
-                          .push(AppRoutes.productsView, extra: index);
+                      if (onTap != null) {
+                        onTap!(categories[index].uuid);
+                        return;
+                      }
+                      GoRouter.of(context).push(AppRoutes.productsView,
+                          extra: categories[index]);
                     },
                     child: CategoryListViewItem(
                       category: categories[index],
-                      active: index == selectedIndex,
+                      active: categories[index].uuid == currentCategory?.uuid,
                     ),
                   ),
                 );

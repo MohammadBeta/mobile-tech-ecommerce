@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:mobile_tech_ecommerce_application/core/utilis/api/api_crud.dart';
+import 'package:mobile_tech_ecommerce_application/core/api/api_crud.dart';
 
 import '../../../../core/constants/app_assets.dart';
 import '../../../../core/widgets/custom_button.dart';
