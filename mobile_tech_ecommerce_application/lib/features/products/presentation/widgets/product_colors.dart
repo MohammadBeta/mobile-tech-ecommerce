@@ -27,7 +27,7 @@ class ProductColors extends StatelessWidget {
                 width: 8,
                 height: 8,
                 decoration: ShapeDecoration(
-                  color: hexColor != null ? Color(hexColor) : null,
+                  color: Color(hexColor),
                   shape: const OvalBorder(
                     side: BorderSide(width: 0.25, color: Color(0xFF444444)),
                   ),

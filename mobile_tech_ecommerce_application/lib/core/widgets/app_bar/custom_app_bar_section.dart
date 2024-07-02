@@ -3,16 +3,16 @@ import 'package:mobile_tech_ecommerce_application/core/widgets/app_bar/custom_ap
 
 import 'search_box.dart';
 
-class AppBarSection extends StatelessWidget {
-  const AppBarSection({
+class CustomAppBarSection extends StatelessWidget {
+  const CustomAppBarSection({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24),
-      child: const Column(
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 24),
+      child: Column(
         children: [
           CustomAppBar(),
           SizedBox(

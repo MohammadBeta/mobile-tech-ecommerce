@@ -16,14 +16,15 @@ class ProductsViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const AppBarSection(),
+        const CustomAppBarSection(),
         const SizedBox(
           height: 16,
         ),
         CategoriseListView(
           currentCategory: currentCategory,
           onTap: (categoryUuid) {
-            BlocProvider.of<FetchProductsByCategoryCubit>(context).fetchProductsByCategory(categoryUuid: categoryUuid);
+            BlocProvider.of<FetchProductsByCategoryCubit>(context)
+                .fetchProductsByCategory(categoryUuid: categoryUuid);
           },
         ),
         const SizedBox(

@@ -11,7 +11,7 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        AppBarSection(),
+        CustomAppBarSection(),
         SizedBox(
           height: 16,
         ),
