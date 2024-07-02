@@ -49,9 +49,21 @@ class Assets {
   /// assets/images/search-normal.svg
   static const String imagesSearchNormal = "assets/images/search-normal.svg";
 
+  /// Assets for imagesShop
+  /// assets/images/shop.png
+  static const String imagesShop = "assets/images/shop.png";
+
+  /// Assets for imagesTruck
+  /// assets/images/truck.png
+  static const String imagesTruck = "assets/images/truck.png";
+
   /// Assets for imagesUser
   /// assets/images/user.svg
   static const String imagesUser = "assets/images/user.svg";
+
+  /// Assets for imagesVerify
+  /// assets/images/verify.png
+  static const String imagesVerify = "assets/images/verify.png";
 
   /// Assets for imagesVideo
   /// assets/images/video.png

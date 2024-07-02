@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_tech_ecommerce_application/core/constants/app_assets.dart';
+import 'package:mobile_tech_ecommerce_application/core/constants/app_colors.dart';
 import 'package:mobile_tech_ecommerce_application/core/widgets/app_bar/custom_app_bar_section.dart';
 import 'package:mobile_tech_ecommerce_application/features/products/data/model/product_model.dart';
+
+import 'product_attributs.dart';
+import 'product_header.dart';
+import 'product_name.dart';
+import 'product_rate_and_sold_qty.dart';
 
 class ProductDetailsViewBody extends StatelessWidget {
   const ProductDetailsViewBody({super.key, required this.productModel});
@@ -9,6 +14,7 @@ class ProductDetailsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const CustomAppBarSection(),
         const SizedBox(
@@ -19,111 +25,36 @@ class ProductDetailsViewBody extends StatelessWidget {
           child: ProductHeader(
             image: productModel.productImage,
           ),
+        ),
+        const SizedBox(
+          height: 8,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: ProductName(productName: productModel.name),
+        ),
+        const SizedBox(
+          height: 8,
+        ),
+        const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 24),
+            child: Column(
+              children: [
+                ProductRateAndSoldQty(),
+                SizedBox(
+                  height: 12,
+                ),
+                ProductAttributes()
+              ],
+            )),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 24),
+          child: Divider(
+            height: 40,
+            color: AppColors.grayEDEDED,
+          ),
         )
       ],
-    );
-  }
-}
-
-class ProductHeader extends StatelessWidget {
-  const ProductHeader({super.key, required this.image});
-  final String image;
-  @override
-  Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 312 / 200,
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              InkWell(
-                onTap: () {},
-                child: Image.asset(
-                  Assets.imagesDirectboxSend,
-                  fit: BoxFit.fill,
-                ),
-              ),
-              const SizedBox(
-                width: 8,
-              ),
-              InkWell(
-                onTap: () {},
-                child: Image.asset(
-                  Assets.imagesNotificationBing,
-                  fit: BoxFit.fill,
-                ),
-              ),
-              const SizedBox(
-                width: 8,
-              ),
-              InkWell(
-                onTap: () {},
-                child: Image.asset(
-                  Assets.imagesHeart,
-                  fit: BoxFit.fill,
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 8,
-          ),
-          Expanded(
-              child: Image.network(
-            image,
-            fit: BoxFit.contain,
-          )),
-          const SizedBox(
-            height: 8,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Container(
-                width: 40,
-                height: 20,
-                padding: const EdgeInsets.all(4),
-                decoration: ShapeDecoration(
-                  color: const Color(0xFF063A88),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4)),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      Assets.imagesCamera,
-                      fit: BoxFit.fill,
-                    ),
-                    const Text(
-                      '1/5',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 10,
-                        fontFamily: 'Inter',
-                        fontWeight: FontWeight.w500,
-                        height: 0,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                width: 8,
-              ),
-              const Icon(Icons.cabin),
-              const SizedBox(
-                width: 8,
-              ),
-              const Icon(Icons.face),
-            ],
-          ),
-        ],
-      ),
     );
   }
 }
