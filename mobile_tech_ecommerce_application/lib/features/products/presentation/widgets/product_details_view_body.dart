@@ -7,6 +7,7 @@ import 'product_attributs.dart';
 import 'product_header.dart';
 import 'product_name.dart';
 import 'product_rate_and_sold_qty.dart';
+import 'select_product_color_section.dart';
 
 class ProductDetailsViewBody extends StatelessWidget {
   const ProductDetailsViewBody({super.key, required this.productModel});
@@ -53,6 +54,10 @@ class ProductDetailsViewBody extends StatelessWidget {
             height: 40,
             color: AppColors.grayEDEDED,
           ),
+        ),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 24),
+          child: SelectProductColorSection(),
         )
       ],
     );
