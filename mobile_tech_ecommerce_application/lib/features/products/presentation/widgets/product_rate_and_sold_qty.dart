@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_styles.dart';
-import 'product_rate2.dart';
+import '../../../../core/widgets/custom_rate.dart';
 
 class ProductRateAndSoldQty extends StatelessWidget {
   const ProductRateAndSoldQty({
@@ -13,7 +13,7 @@ class ProductRateAndSoldQty extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const ProductRate(),
+        const CustomRate(),
         const SizedBox(
           height: 16,
           child: VerticalDivider(

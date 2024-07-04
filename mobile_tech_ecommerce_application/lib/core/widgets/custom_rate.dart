@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/app_colors.dart';
-import '../../../../core/constants/app_styles.dart';
+import '../constants/app_colors.dart';
+import '../constants/app_styles.dart';
 
-class ProductRate extends StatelessWidget {
-  const ProductRate({
+class CustomRate extends StatelessWidget {
+  const CustomRate({
     super.key,
   });
 
